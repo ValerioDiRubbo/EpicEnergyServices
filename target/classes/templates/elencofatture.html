@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Epic Energy Services - Energia per vivere.</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" th:href="@{/css/layout.css}"/>
+</head>
+<body>
+<div class="header-menu">Epic Energy Services - Per un mondo più pulito.</div>
+<div class="header-section">Elenco fatture</div>
+ <div th:switch="${fatture.size()}">
+   <div class="no-item-found" th:case="0">Nessuna fattura trovata!</div>
+   <!-- * for default case -->
+   <div th:case="*">
+   <table width="100%">
+     <thead>
+        <tr>
+        	<th class="header">ID fattura</th>
+            <th class="header">Numero fattura</th>
+            <th class="header">Importo</th>
+            <th class="header">Anno</th>
+            <th class="header">Data Emissione</th>
+            <th class="header">Stato fattura</th>
+            <th class="header">Ragione sociale cliente associato</th>
+        </tr>
+      </thead>
+      <tbody>
+            <tr th:each="fattura : ${fatture}">
+            	<td th:text="${fattura.id}"></td>
+               <td th:text="${fattura.numeroFattura}"></td>
+               <td th:text="${fattura.importo}"></td>
+               <td th:text="${fattura.anno}"></td>
+               <td th:text="${fattura.data}"></td>
+               <td th:text="${fattura.statoFattura}"></td>
+               <td th:text="${fattura.cliente}"></td>
+               <td><a th:href="@{/clienti/fatture/eliminafattura/{id}(id=${fattura.id})}"><i>Elimina</i></a></td>
+            </tr>
+       </tbody>
+   </table>
+   <div class="link-add"><a href="/clienti/fatture/mostraformaggiungi">Aggiungi Fattura</a></div>
+  </div>
+    <div class="link-home"><a href="/clienti/index">Torna alla Home</a></div>
+    <div class="footer">Powered by Epicode School</div>
+    </div>
+   </body>
+</html>

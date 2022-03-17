@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Lista Clienti</title>
+</head>
+<body>
+
+	<h1>Lista Clienti</h1>
+		<h2>Clienti:</h2>
+	
+	<div th:each="c: ${listaClienti}">
+		<div th:text="${c.toString()}"></div>
+		</div>
+<a href="/creaclienti">Aggiungi cliente</a>
+<a href="/editclienti">Aggiorna cliente</a>
+<a href="/eliminacliente">Cancella cliente</a>
+</body>
+</html>

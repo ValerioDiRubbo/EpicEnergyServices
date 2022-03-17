@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Form Fattura</title>
+</head>
+<body>
+	<h1>Inserisci i dettagli della fattura</h1>
+	<form action="#" th:action="@{/clienti/fatture/addFattura}"
+		th:object="${fattura}" method="post">
+
+		<p>
+			NumeroFattura: <input type="text" th:field="*{numeroFattura}" />
+		</p>
+		<p>
+			Importo: <input type="text" th:field="*{importo}" />
+		</p>
+
+		<p>
+			Anno: <input type="text" th:field="*{anno}" />
+		</p>
+
+		<p>
+			Data Emissione: <input type="date" pattern="yyyy-MM-dd"
+				th:field="*{data}" />
+		</p>
+
+		<p>Stato Fattura:
+		<br> <select th:field="*{statoFattura}" name="enumstatofattura">
+			<option th:each="e : ${T(it.epicode.be.model.StatoFattura).values()}"
+				th:value="${e}" th:text="${e}"></option>
+		</select></p>
+
+			<select th:field="*{cliente}">
+				<option th:each="c : ${listaClienti}" th:value="${c.id}"
+					th:text="${c.ragioneSociale}" />
+			</select>
+
+			<input type="submit" value="Submit" /> <input type="reset"
+				value="Reset" />
+		
+
+
+	</form>
+	<a href="/clienti/elencoclienti">Lista Clienti</a>
+	<a href="/clienti/fatture/elencofatture">Lista Fatture</a>
+</body>
+</html>
