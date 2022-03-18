@@ -4,7 +4,7 @@ Prima impalcatura di un CRM per la  gestione di Clienti e Fatture per un ipoteti
 
 <b>-Tecnologie utilizzate-</b>
 
-Il linguaggio usato per lo sviluppo è quello Java, nella sua versione 8. Ide utilizzato per la creazione: Eclipse.
+Il linguaggio usato per lo sviluppo è quello Java, nella sua versione 11. Ide utilizzato per la creazione: Eclipse.
 Il piccolo front-end relativo è realizzato tramite Template Engine Thymeleaf.
 Il database utilizzato è PostegreSQL, con la possibilità di integrare un database integrato (H2).
 
