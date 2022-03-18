@@ -21,7 +21,7 @@ Le maggiori features del progetto sono:
 	
     Ruolo User: Permette di accedere alle funzionalità di sola lettura, isolando cambiamenti sostanziali per i soli utenti.
 	
-<b>- L'app è raaccolta in package seguendo il pattern architetturale MVC.</b>
+<b>- L'app è raccolta in package seguendo il pattern architetturale MVC.</b>
 
 	-I controller si dividono in controller.WEB (che richiama le funzionalità di Thymeleaf) e il controller per le chiamate REST.
 	-I Package che terminano per security sono specializzati nella sicurezza dell'applicazione, autenticazione e tutto il resto.
