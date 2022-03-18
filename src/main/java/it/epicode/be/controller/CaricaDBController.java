@@ -1,7 +1,5 @@
 package it.epicode.be.controller;
 
-import javax.annotation.security.RolesAllowed;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +14,7 @@ public class CaricaDBController {
 
 	@Autowired
 	CaricaDB loader;
-	
+
 	@GetMapping("/caricaDB")
 	@Operation(description = "Carica il Database con le liste di comuni e province e 3 clienti prova.")
 	public void caricaDatabase() {
