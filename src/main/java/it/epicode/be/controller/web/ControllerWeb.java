@@ -158,27 +158,6 @@ public class ControllerWeb {
 		}
 	}
 
-//	@GetMapping("/mostraformaggiorna/{id}")
-//	public ModelAndView mostraFormAggiungi(@PathVariable Long id, Model model) {
-//		log.info("Test form aggiorna studenti.");
-//		Optional<Cliente> studenteUpdate = clienteService.findById(id);
-//		if (studenteUpdate.isPresent()) {
-//			ModelAndView view = new ModelAndView("editstudente");
-//			view.addObject("studente", studenteUpdate.get()); // Object riga 9 della view. Grazie a questo mi valorizza
-//																// la maschera con lo studente ID inserito.
-//			view.addObject("listaCorsi", corsoService.findAll());
-//			return view;
-//		}
-//		return new ModelAndView("error").addObject("message", id + " non trovato.");
-//	}
-//
-//	// TODO: implementare controlli su binding result.
-//	@PostMapping("/aggiornastudente/{id}")
-//	public String aggiornaStudente(@PathVariable Long id, Studente studente, BindingResult result, Model model) {
-//		log.info("Studente aggiornato.");
-//		clienteService.update(studente, id);
-//		return "redirect:/clienti/mostraelenco";
-//	}
-//
+
 
 }
