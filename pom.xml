@@ -15,7 +15,7 @@
 	<name>EpicEnergyServices</name>
 	<description>CRM gestionale per EpicEnergyServices</description>
 	<properties>
-		<java.version>8</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

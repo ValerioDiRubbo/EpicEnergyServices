@@ -69,9 +69,7 @@
 			<p>
 				CAP: <input type="text" th:field="*{indirizzoSedeLegale.cap}" />
 			</p>
-			<p>
-				Località: <input type="text" th:field="*{indirizzoSedeLegale.localita}" />
-			</p>
+			
 			<select th:field="*{indirizzoSedeLegale.comune}">
 				<option th:each="c : ${listaComuni}" th:value="${c.id}"
 					th:text="${c.nomeComune}" />
@@ -87,9 +85,7 @@
 			<p>
 				CAP: <input type="text" th:field="*{indirizzoSedeOperativa.cap}" />
 			</p>
-			<p>
-				Località: <input type="text" th:field="*{indirizzoSedeOperativa.localita}" />
-			</p>
+			
 			<select th:field="*{indirizzoSedeOperativa.comune}">
 				<option th:each="c : ${listaComuni}" th:value="${c.id}"
 					th:text="${c.nomeComune}" />

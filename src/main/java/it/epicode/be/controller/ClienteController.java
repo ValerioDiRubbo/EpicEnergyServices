@@ -32,7 +32,6 @@ public class ClienteController {
 	@Autowired
 	private ClienteService clienteService;
 
-	
 	@GetMapping(path = "/clienti")
 	@RolesAllowed({ "ROLE_USER", "ROLE_ADMIN" })
 	@Operation(description = "Trova tutti i clienti.")
@@ -45,7 +44,7 @@ public class ClienteController {
 			return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
 		}
 	}
-	
+
 	@GetMapping(path = "/cliente/ordina/nome")
 	@RolesAllowed({ "ROLE_USER", "ROLE_ADMIN" })
 	@Operation(description = "Ordina tutti i clienti per nome, in ordine ascendente.")
@@ -187,7 +186,7 @@ public class ClienteController {
 	@RolesAllowed({ "ROLE_USER", "ROLE_ADMIN" })
 	@Operation(description = "Inserire parte del nome del cliente da ricercare.")
 	public ResponseEntity<Page<Cliente>> filtraNomeParziale(@PathVariable String nomeparziale, Pageable pageable) {
-		Page<Cliente> findAll = clienteService.findNomeParziale( nomeparziale,pageable);
+		Page<Cliente> findAll = clienteService.findNomeParziale(nomeparziale, pageable);
 
 		if (findAll.hasContent()) {
 			return new ResponseEntity<>(findAll, HttpStatus.OK);
