@@ -58,7 +58,7 @@
 		</select></p>
 
 
-		 <!--   <div th:object="${indirizzo}"> -->
+		 
 			<h2>Indirizzo Sede Legale</h2>
 			<p>
 				Via: <input type="text" th:field="*{indirizzoSedeLegale.via}" />
@@ -75,7 +75,7 @@
 					th:text="${c.nomeComune}" />
 			</select>
 		
-		<h2>Indirizzo Sede Legale</h2>
+		<h2>Indirizzo Sede Operativa</h2>
 			<p>
 				Via: <input type="text" th:field="*{indirizzoSedeOperativa.via}" />
 			</p>
@@ -99,7 +99,7 @@
 
 
 	</form>
-	<a href="/clienti/elencoclienti">Lista Clienti</a>
-	<a href="/fatture/mostraelenco">Lista Fatture</a>
+	<a href="/clienti/mostraelenco">Lista Clienti</a>
+	<a href="/clienti/fatture/mostraelenco">Lista Fatture</a>
 </body>
 </html>
