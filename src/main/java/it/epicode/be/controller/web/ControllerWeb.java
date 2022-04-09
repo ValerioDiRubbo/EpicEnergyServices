@@ -129,7 +129,7 @@ public class ControllerWeb {
 
 		model.addAttribute("listaClienti", clienteService.findAll());
 
-		return "formFattura";
+		return "formfattura";
 	}
 
 	@PostMapping("fatture/addFattura")
@@ -137,7 +137,7 @@ public class ControllerWeb {
 
 		if (result.hasErrors()) {
 			model.addAttribute("listaFatture", fatturaService.findAll());
-			return "formFattura";
+			return "formfattura";
 		}
 
 		fatturaService.save(fattura);
